@@ -20,5 +20,10 @@ export class AppComponent {
     this.ItemList.find(x=>x.ItemName == todo.ItemName).Completed = true;
     console.log(this.ItemList);
   }
+  deleteItem(todo :Todo){
+    console.log("silmeye çalış");
+    let index = this.ItemList.indexOf(todo);
+    this.ItemList.splice(index,1);
+  }
 }
 

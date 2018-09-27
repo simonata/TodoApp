@@ -1,11 +1,12 @@
 <div class="container">
   <h1>Todo App</h1>
   <div class="list-group">
-    <a class="list-group-item" *ngFor="let item of ItemList" (click)="ItemCompleted(item)">
+    <a [class]="item.Completed == true ? 'list-group-item list-group-item-success' : 'list-group-item list-group-item-warning' " *ngFor="let item of ItemList" (click)="ItemCompleted(item)">
      <!-- checkbox için item true or false olması durumunda veritabanından çekerken tamamlanmış mı tamammlanmamış mı
       kontrol edilecek
      -->
       <input class="form-check-input " type="checkbox" ngControl="item" [(ngModel)]="item['Completed']">{{item.ItemName}}
+      <button style="background-position-x:right " (click)="deleteItem(item)"><span class="glyphicon glyphicon-remove"></span></button>
     </a>
   </div>
   <div class="list-group">
