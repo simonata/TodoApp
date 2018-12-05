@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Todo App </h1>
+  <h1>Todo App! </h1>
   <div class="list-group">
     <div [class]="item.Completed == true ? 'list-group-item list-group-item-success' : 'list-group-item list-group-item-warning' " *ngFor="let item of ItemList" (click)="ItemCompleted(item)">
      <!-- checkbox için item true or false olması durumunda veritabanından çekerken tamamlanmış mı tamammlanmamış mı
