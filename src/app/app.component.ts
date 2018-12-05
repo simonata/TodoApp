@@ -16,7 +16,7 @@ export class AppComponent {
    console.log(this.ItemList);
    this.Item.ItemName = ''; 
   }
-  ItemCompleted(todo Todo){
+  ItemCompleted(todo :Todo){
     this.ItemList.find(x=>x.ItemName == todo.ItemName).Completed = true;
     console.log(this.ItemList);
   }
